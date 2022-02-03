@@ -3,7 +3,7 @@ import 'counter1.dart';
 import 'counter2.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard({Key? key}) : super(key: key);
+  const Dashboard() : super();
 
   @override
   Widget build(BuildContext context) {

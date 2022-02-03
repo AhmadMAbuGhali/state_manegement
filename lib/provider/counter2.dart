@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class Counter1 extends StatelessWidget {
-  const Counter1({Key? key}) : super(key: key);
+import 'my_provider.dart';
+
+class Counter2 extends StatelessWidget {
+
 
   @override
   Widget build(BuildContext context) {
-    return const Card(
+    return  Card(
       elevation: 6,
       child: SizedBox(
         width: 150,
         height: 150,
         child: Center(
-          child: Text("0", style: TextStyle(fontSize: 40)),
+          child: Text("${Provider.of<MyProvider>(context).counter}", style: TextStyle(fontSize: 40)),
         ),
       ),
     );

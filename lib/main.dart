@@ -1,34 +1,25 @@
 import 'package:flutter/material.dart';
-import 'dashboard.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:state_manegement/getX/controllers/counter_controller.dart';
+import 'package:state_manegement/getX/views/counterx_pro.dart';
+
+
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+const MyApp({Key? key}): super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+   Get.put(CounterControllers());
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterPro(),
+      //
+      home:  CounterXPro(),
     );
   }
 }
 
-class CounterPro extends StatelessWidget {
-  const CounterPro({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Demo')),
-      body: const Center(
-        child: Dashboard(),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.add),
-        onPressed: () {},
-      ),
-    );
-  }
-}
+
